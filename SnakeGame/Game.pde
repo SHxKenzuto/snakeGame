@@ -144,6 +144,7 @@ class Game
     {
       if(i == 0)
         f = true;
+      i++;
     }
     return !f;
   }
