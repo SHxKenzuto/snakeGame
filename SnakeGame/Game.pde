@@ -138,14 +138,14 @@ class Game
   //Checks if the game is won
   boolean game_won()
   {
-    boolean f = false;
+    boolean f = true;
     int i = 0;
-    while(i<(x_index*y_index) && !f)
+    while(i<(x_index*y_index) && f)
     {
-      if(i == 0)
-        f = true;
+      if(matrix[i/x_index][i%y_index] == 0)
+        f = false;
       i++;
     }
-    return !f;
+    return f;
   }
 }
